@@ -1,5 +1,7 @@
-// import 'package:athangflutterapp/screens/Home.dart';
+import 'package:athangflutterapp/screens/Home.dart';
 import 'package:athangflutterapp/screens/PlantLanding.dart';
+import 'package:athangflutterapp/screens/UserProfile.dart';
+import 'package:athangflutterapp/screens/travel/TravelBhutan.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,8 +22,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: Home() ,
-       home: const PlantLanding(),
-      // plantLanding: PlantLanding(),
+      // home: const PlantLanding(),
+      // home: Userprofile(),
+      home: const TravelBhutan()
     );
   }
 }
