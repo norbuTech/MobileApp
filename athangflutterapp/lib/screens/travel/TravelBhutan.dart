@@ -7,7 +7,7 @@ class TravelBhutan extends StatelessWidget {
  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
+      body: Container(
       height: MediaQuery.of(context).size.height,
       color: Colors.blueAccent,
       child: Stack(

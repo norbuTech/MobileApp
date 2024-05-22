@@ -22,7 +22,7 @@ class TravelBhutanHome extends StatelessWidget {
             //       );
             //   }).toList(),
           // children:[
-            TravelPlacesHome(),
+            const TravelPlacesHome(),
             RecommendedPlaces()
           ],
         ),

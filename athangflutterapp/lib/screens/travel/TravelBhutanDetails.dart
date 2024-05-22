@@ -14,7 +14,7 @@ class TravelBhutanDetails extends StatelessWidget {
           title: Text(travel.title),
         ),
         body: Container(
-          padding: EdgeInsets.only(top:16, left:16, right:16),
+          padding: const EdgeInsets.only(top:16, left:16, right:16),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,10 +32,10 @@ class TravelBhutanDetails extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 8),
+                  margin: const EdgeInsets.only(top: 8),
                   child: Text(
                     travel.location,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
                 Container(
