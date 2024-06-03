@@ -2,6 +2,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mapp/firebase_options.dart';
+import 'package:flutter_mapp/hoc/home_layout.dart';
 import 'package:flutter_mapp/plugins/firebase_api.dart';
 import 'package:flutter_mapp/plugins/local_notifications.dart';
 import 'package:flutter_mapp/screens/Temp_screen.dart';
@@ -37,11 +38,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      // home: SplashScreen(),
       // home:AddTransaction()
       // home: TempScreen(),
       // home: HomeLayout(),
-      // home:SavingAccount()
+      home:SavingAccount()
     );
   }
 }
