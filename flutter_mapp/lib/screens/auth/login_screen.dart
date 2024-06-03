@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onEditingComplete: () {
                         passwordFocusNode.requestFocus();
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: OutlineInputBorder(), labelText: 'Email'),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -112,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 48,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.redAccent,
+                          backgroundColor:  Color(0xFFEA6C43),
                           foregroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
@@ -133,7 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 Container(
                                   height:24,
                                   width: 24,
-                                  child: CircularProgressIndicator(
+                                  child: const CircularProgressIndicator(
                                     color: Colors.white,
                                   ),
                                 )
@@ -151,9 +151,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            foregroundColor: Colors.redAccent),
+                            foregroundColor: Colors.blueAccent),
                         onPressed: () {},
-                        child: Text('Don\'t have an account? Sign up.'),
+                        child: const Text('Don\'t have an account? Sign up.'),
                       ),
                     ),
                   ],

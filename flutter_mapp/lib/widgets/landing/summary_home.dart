@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp/base/style/text_styles.dart';
 import 'package:flutter_mapp/domain/landing/summary_model.dart';
 import 'package:flutter_mapp/domain/landing/summary_repo.dart';
 
@@ -26,12 +28,12 @@ class _SummaryHomeState extends State<SummaryHome> {
   Widget build(BuildContext context) {
     return Container(
       // color:Colors.blueAccent,
-      height: 260,
+      height: 210,
       child: Stack(
         children: [
           Container(
-            height: 165,
-            color: Colors.redAccent,
+            height: 120,
+            color:Color(0xFFEA6C43), // Background color set to #EA6C43
           ),
           Align(
             alignment: Alignment.center,
@@ -39,6 +41,14 @@ class _SummaryHomeState extends State<SummaryHome> {
               padding: EdgeInsets.all(16),
               // color: Colors.blue,
               margin: EdgeInsets.only(bottom: 16),
+             decoration: BoxDecoration(
+              // color: Colors.white,
+              border: Border(
+                top: BorderSide(color: Colors.white70, width: 1), // Top border
+                // bottom: BorderSide(color: Colors.black, width: 2), // Bottom border
+              ),
+              borderRadius: BorderRadius.circular(2), // Optional: Add rounded corners
+            ),
               child: Column(
                 children: [
                   Container(
@@ -51,19 +61,22 @@ class _SummaryHomeState extends State<SummaryHome> {
                       children: [
                         Text(
                           'Current Balance',
-                          style: TextStyle(fontSize: 20),
+                          style: TypoStyles().kPageHeader,
                         ),
                         Text(
-                          'Nu.'+summary.openingBalance.toString(),
-                          style: TextStyle(
-                              fontSize: 32, fontWeight: FontWeight.bold),
+                        'Nu.${summary.openingBalance.toString()}', // Display opening balance
+                          style: TypoStyles().kSectionHeader,
                         ),
                         // Container(color: Colors.red, height: 50),
                       ],
                     ),
                   ),
                   Container(
-                    color: Colors.white,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.greenAccent), // Border for the outer container
+                      borderRadius: BorderRadius.circular(4), // Optional: Add rounded corners
+                    ),
                     margin: EdgeInsets.only(bottom: 16),
                     padding: EdgeInsets.all(8),
                     child: Row(
@@ -71,11 +84,15 @@ class _SummaryHomeState extends State<SummaryHome> {
                         Expanded(
                           child: Container(
                             padding: EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                              border:Border.all(color:Colors.greenAccent),
+                              borderRadius: BorderRadius.circular(6),
+                            ),
                             child: Row(
                               children: [
                                 Container(
                                   width: 60,
-                                  child: Center(
+                                  child: const Center(
                                     child: Icon(
                                       Icons.arrow_downward,
                                       size: 36,
@@ -90,15 +107,11 @@ class _SummaryHomeState extends State<SummaryHome> {
                                       children: [
                                         Text(
                                           'Total Expense',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                          ),
+                                          style: TypoStyles().kPageHeader
                                         ),
                                         Text(
                                           'Nu. ${summary.expenses}',
-                                          style: TextStyle(
-                                            fontSize: 24,
-                                          ),
+                                          style: TypoStyles().kSectionHeader
                                         ),
                                       ],
                                     ),
@@ -107,15 +120,21 @@ class _SummaryHomeState extends State<SummaryHome> {
                               ],
                             ),
                           ),
-                        ),
+                        ),          
+                        SizedBox(width: 16),
                         Expanded(
                           child: Container(
                             padding: EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                              border:Border.all(color:Colors.greenAccent),
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+
                             child: Row(
                               children: [
                                 Container(
                                   width: 60,
-                                  child: Center(
+                                  child: const Center(
                                     child: Icon(
                                       Icons.arrow_downward,
                                       size: 36,
@@ -130,15 +149,11 @@ class _SummaryHomeState extends State<SummaryHome> {
                                       children: [
                                         Text(
                                           'Total Income',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                          ),
+                                          style: TypoStyles().kPageHeader
                                         ),
                                         Text(
                                           'Nu. ${summary.income}',
-                                          style: TextStyle(
-                                            fontSize: 24,
-                                          ),
+                                          style: TypoStyles().kSectionHeader
                                         ),
                                       ],
                                     ),
